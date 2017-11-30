@@ -21,10 +21,15 @@ def hello():
     resultstring = ""
     for row in result:
         resultstring += str(row) + "<\br>"
-        
-    return """<html><body>
-        {0}</body></html>""".format(
-            resultstring)
+
+
+    templatefile = open("template.html")
+    html_template = templatefile.read()
+    templatefile.close()
+
+
+
+    return html_template
 
 # Launch the BottlePy dev server
 if __name__ == "__main__":
