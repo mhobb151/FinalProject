@@ -1,49 +1,25 @@
+<!DOCTYPE html>
 <html>
-<header>
-    <center><h1><u>Service Order Generator</u></h1></center>
-</header>
-<style>
-body {
-    background: lightslategrey
-}
-form {
-    margin: 0 auto;
-    width: 400px;
-    padding: 1em;
-    border: 8px solid black;
-    border-radius: 1em;
-    background: teal
-
-}
-form div + div {
-    margin-top: 1em
-}
-label {
-    display: inline-block;
-    width: 90px;
-    text-align: right;
-}
-</style>    
+<head>
+     <link href="static/style.css" type="text/css" rel="stylesheet">
+</head>
+   
 <body>
-    <form>
-        <label>New Service Date</label> <input type="date" />                    <text name="date"></text><br />
-        <br />
-        <label>Time</label> <text name ="time"><input type="text" /></text><br />
-        <br />
-        <label>Template Service</label> <select name = "Template Service"> 
-            <option value= "Template Service" >sun -- pm</option>
-            <option value= "Template Service" >sun -- am</option>
-            <option value= "Template Service" >Wend -- pm</option>
+    <center><h1><u>Service Order Generator</u></h1></center>
+    <form action='/' method='POST'>
+        <label>Template Service</label> 
+        <select name = "Template Service"> 
+            {0}
             </select>
         <br />
         <br />
-        <label>Title</label> <text name = "Title"><input type="text" /></text><br />
+        <label>Title</label> <text name = "Title"><input type="text" maxlength="40"></text><br />
         <br />
-        <label>Theme</label> <text name = "Theme"><input type="text" /></text><br />
+        <label>Theme</label> <text name = "Theme"><input type="text" maxlength="40"></text><br />
         <br />
-        <label>Songleader</label> <select name = "Songleader">
-            <option value="Songleader">Jonathan Boyle</option>
-            <option value="Songleader">Alan Kennedy</option>
+        <label>Songleader</label> 
+        <select name = "Songleader">
+            {1}
             </select>
         <br />
         <input type= "submit" value = "CREATE">
