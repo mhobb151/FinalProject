@@ -1,11 +1,32 @@
+<!DOCTYPE html>
 <html>
+<head>
+     <link href="static/style.css" type="text/css" rel="stylesheet">
+</head>
+   
 <body>
     <center><h1><u>Service Order Generator</u></h1></center>
-
-
-    <form>
-        <label>New Service Date</label><text name="date"></text>
-        <label>Time</label><text name ="time"></text>
+    <form action='/' method='POST'>
+        <label>New Service Date</label> <input type="date" />                    <text name="date"></text><br />
+        <br />
+        <label>Time</label> <text name ="time"><input type="text" /></text><br />
+        <br />
+        <label>Template Service</label> 
+        <select name = "Template Service"> 
+            {0}
+            </select>
+        <br />
+        <br />
+        <label>Title</label> <text name = "Title"><input type="text" maxlength="40"></text><br />
+        <br />
+        <label>Theme</label> <text name = "Theme"><input type="text" maxlength="40"></text><br />
+        <br />
+        <label>Songleader</label> 
+        <select name = "Songleader">
+            {1}
+            </select>
+        <br />
+        <input type= "submit" value = "CREATE">
     </form>
 
 </body>
