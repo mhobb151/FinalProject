@@ -1,11 +1,52 @@
 <html>
-<body>
+<header>
     <center><h1><u>Service Order Generator</u></h1></center>
+</header>
+<style>
+body {
+    background: lightslategrey
+}
+form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 8px solid black;
+    border-radius: 1em;
+    background: teal
 
-
+}
+form div + div {
+    margin-top: 1em
+}
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+</style>    
+<body>
     <form>
-        <label>New Service Date</label><text name="date"></text>
-        <label>Time</label><text name ="time"></text>
+        <label>New Service Date</label> <input type="date" />                    <text name="date"></text><br />
+        <br />
+        <label>Time</label> <text name ="time"><input type="text" /></text><br />
+        <br />
+        <label>Template Service</label> <select name = "Template Service"> 
+            <option value= "Template Service" >sun -- pm</option>
+            <option value= "Template Service" >sun -- am</option>
+            <option value= "Template Service" >Wend -- pm</option>
+            </select>
+        <br />
+        <br />
+        <label>Title</label> <text name = "Title"><input type="text" /></text><br />
+        <br />
+        <label>Theme</label> <text name = "Theme"><input type="text" /></text><br />
+        <br />
+        <label>Songleader</label> <select name = "Songleader">
+            <option value="Songleader">Jonathan Boyle</option>
+            <option value="Songleader">Alan Kennedy</option>
+            </select>
+        <br />
+        <input type= "submit" value = "CREATE">
     </form>
 
 </body>
